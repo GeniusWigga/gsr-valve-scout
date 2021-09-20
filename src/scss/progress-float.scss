@@ -1,0 +1,34 @@
+@import "../variables";
+
+.progress-float {
+
+  color: white;
+  background-color: $color-bg-dark;
+
+  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.8);
+
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 5px;
+
+  transition: width 250ms ease-in;
+
+  &.finished {
+    transition: left 250ms ease-out;
+    transition-delay: 500ms;
+    left: 120%;
+  }
+
+  @media only screen and (min-width: 800px) {
+    height: 8px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 10px;
+  }
+}

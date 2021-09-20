@@ -1,0 +1,87 @@
+@import "../variables";
+
+.clear-all-values-button {
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  visibility: visible;
+  display: inline-flex;
+  color: white;
+  background-color: $color-bg-dark;
+  justify-content: space-around;
+  padding: 9px 14px;
+  bottom: 85px;
+  z-index: 2;
+
+  width: 15rem;
+
+  text-align: center;
+
+  @media only screen and (max-width: 985px) {
+    transition: right 500ms ease-out;
+
+    right: -100%;
+
+    &.resultActive {
+      bottom: 180px;
+    }
+
+    font-size: 10px;
+
+    &.show {
+      right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    transition: right 500ms ease-out;
+
+    right: -100%;
+
+    &.resultActive {
+      bottom: 230px;
+    }
+
+    &.show {
+      right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 695px) {
+    transition: right 500ms ease-out;
+
+    right: -100%;
+
+    &.resultActive {
+      bottom: 275px;
+    }
+
+    &.show {
+      right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 355px) {
+    transition: right 500ms ease-out;
+
+    right: -100%;
+
+    &.resultActive {
+      bottom: 310px;
+    }
+
+    &.show {
+      right: 0;
+    }
+  }
+
+  @media only screen and (min-width: 986px) {
+    transition: right 500ms ease-out;
+
+    right: -100%;
+
+    &.show {
+      right: 0;
+    }
+  }
+}

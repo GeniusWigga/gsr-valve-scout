@@ -1,0 +1,176 @@
+@import "../variables.scss";
+
+$intro-container-bg: #e0e0e0;
+
+.valve-search {
+  .intro-container {
+    background-color: $intro-container-bg;
+  }
+
+  a.print-button {
+    color: $color-main !important;
+  }
+
+  .valve-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .valve-search-wrapper {
+    max-width: 38rem;
+    margin: 0 auto;
+    position: relative;
+
+    .valve-search-form {
+      display: flex;
+      margin-bottom: 4rem;
+      width: 100%;
+
+      .valve-search-delete {
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        height: 35px;
+        width: 6%;
+        left: 58.9%;
+        color: black;
+
+        i {
+          margin: auto;
+          font-size: 1.1rem;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          display: none;
+        }
+        @supports (-ms-accelerator: true) {
+          display: none;
+        }
+        @supports (-ms-ime-align: auto) {
+          display: none;
+        }
+      }
+
+      .valve-search-input {
+        width: 65%;
+        margin: 0;
+        height: 35px;
+        box-sizing: border-box;
+        padding: 2% 5% 2% 2%;
+        border: none;
+        border-radius: 0;
+        color: $color-text-primary;
+        box-shadow: 0 5px 7px rgba(171, 171, 171, 0.59);
+
+        &--error {
+          border-bottom: 2px solid $color-main;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          padding: 2%;
+        }
+        @supports (-ms-accelerator: true) {
+          padding: 2%;
+        }
+        @supports (-ms-ime-align: auto) {
+          padding: 2%;
+        }
+      }
+
+      .valve-search-submit {
+        width: 35%;
+        margin: 0;
+        cursor: pointer;
+        border: none;
+        background-color: $color-main;
+        box-shadow: 0 5px 7px rgba(171, 171, 171, 0.59);
+
+        .valve-search-submit-text {
+          color: $color-bright;
+
+          i {
+            font-size: 1.1rem;
+            margin-right: 10px;
+          }
+        }
+
+        &--error {
+          background-color: $color-text-grey;
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .valve-search-error {
+      position: absolute;
+      bottom: -3rem;
+      width: 65%;
+      color: $color-main;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .valve-search-results-wrapper {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translate(0, 100%);
+      background-color: $color-bg-medium-grey;
+      border-top: 1px solid $color-bg-medium-grey;
+      box-shadow: 0 5px 7px rgba(171, 171, 171, 0.59);
+
+      .valve-search-result {
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        background-color: #fff;
+        padding: 7px 10px;
+        color: $color-text-primary;
+
+        &:hover {
+          background-color: $color-bg-medium-grey;
+        }
+
+        &:focus {
+          background-color: $color-bg-medium-grey;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .valve-search-wrapper {
+      .valve-search-form {
+        .valve-search-input {
+          width: 90%;
+        }
+
+        .valve-search-delete {
+          left: auto;
+          right: 10%;
+        }
+
+        .valve-search-error {
+          width: 90%;
+        }
+
+        .valve-search-submit {
+          width: 10%;
+
+          .valve-search-submit-text {
+            i {
+              margin: auto;
+            }
+
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.valve-result-overview-wrapper {
+  max-width: $result-overview-max-width;
+  margin: 0 auto;
+  width: 100%;
+
+  .valve-result-overview {
+    .max-variants h3 {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 500px;
+
+      strong {
+        color: $color-main;
+      }
+
+      &:first-child {
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  .intro-container {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    box-sizing: border-box;
+
+    .title {
+      margin: 0
+    }
+
+    .description {
+      color: $color-text-light-readable-grey;
+    }
+  }
+
+  .valve-result-loading-wrapper {
+    position: relative;
+    min-height: 200px;
+  }
+
+  @import 'valve-result-overview-tile';
+}

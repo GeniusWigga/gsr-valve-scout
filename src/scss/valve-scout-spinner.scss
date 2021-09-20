@@ -1,0 +1,18 @@
+.valve-scout-spinner {
+  position: relative;
+
+  &.isLoading {
+    min-height: 250px;
+
+    &.main {
+      min-height: 500px;
+      max-width: $standard-max-width;
+      margin: 0 auto;
+      padding: 5% 20% 5% 5%;
+    }
+
+    &.operatingPressure {
+      min-height: 150px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+$standard-max-width: 38rem;
+$result-overview-max-width: 80rem;
+
+#valve-scout {
+  position: relative;
+
+  .valve-scout-wrapper {
+    width: 100%;
+  }
+
+  .valve-questions-wrapper,
+  .valve-result-overview-wrapper {
+    box-sizing: border-box;
+  }
+
+  .valve-questions-wrapper .valve-questions-container {
+    max-width: $standard-max-width;
+    margin: 0 auto;
+  }
+
+  .valve-result-wrapper {
+    margin-top: 5rem;
+    background-color: #E0E0E0;
+  }
+
+  @import "./description-container";
+  @import "./questions-wrapper";
+  @import "./valve-result-overview";
+  @import "./form";
+  @import "./valve-scout-spinner";
+  @import "./no-answers-overlay";
+  @import "./clear-all-values-button";
+  @import "./open-form-button";
+  @import "./progress-float";
+  @import "./help-text-overlay";
+  @import "./search-input";
+  @import "./valve-result-overlay";
+  @import "./valve-result-send";
+  @import "./people-row";
+  @import "./response";
+  @import "./valve-list";
+  @import "./valve-search";
+  @import "./valve-search-dialog";
+  @import "./kv-calculator";
+}

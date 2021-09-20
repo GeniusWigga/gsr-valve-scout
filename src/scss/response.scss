@@ -1,0 +1,30 @@
+.response {
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  position: relative;
+  padding-right: 25px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #999999;
+  max-width: 400px;
+  align-items: center;
+
+  .fa {
+    position: relative;
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    padding-right: 10px;
+
+    &.fa-check-circle {
+      color: $color-green;
+    }
+
+    &.fa-times-circle {
+      color: $color-main-brighter;
+    }
+  }
+
+  & > * {
+    margin: auto;
+  }
+}

@@ -1,0 +1,152 @@
+@import "../variables";
+
+.valveResultSend-enter {
+  margin-bottom: -200px;
+  opacity: 0.01;
+}
+
+.valveResultSend-enter.valveResultSend-enter-active {
+  margin-bottom: 0;
+  opacity: 1;
+  transition: opacity 400ms ease-in, margin-bottom 400ms ease-out;
+  -webkit-transition: opacity 400ms ease-in, margin-bottom 400ms ease-out;
+  -moz-transition: opacity 400ms ease-in, margin-bottom 400ms ease-out;
+  -o-transition: opacity 400ms ease-in, margin-bottom 400ms ease-out;
+  transition-delay: 2s;
+  -webkit-transition-delay: 2s;
+  -moz-transition-delay: 2s;
+  -o-transition-delay: 2s;
+}
+
+.valveResultSend-leave {
+  opacity: 1;
+  margin-bottom: 0;
+}
+
+.valveResultSend-leave.valveResultSend-leave-active {
+  opacity: 0.01;
+  margin-bottom: -200px;
+  transition: opacity 400ms ease-in, margin-bottom 400ms ease-out;
+}
+
+.valveResultSendForm-leave {
+  opacity: 1;
+  margin-bottom: 0;
+}
+
+.valveResultSendForm-leave.valveResultSendForm-leave-active {
+  opacity: 0.01;
+  margin-bottom: 200px;
+  transition: opacity 400ms ease-in-out, margin-bottom 400ms ease-in-out;
+}
+
+.valve-result-send-wrapper {
+  width: 100%;
+  padding-right: 20%;
+  padding-left: 5%;
+  // place over cookie-consent
+  z-index: 9999;
+  bottom: 0;
+  position: fixed;
+  box-sizing: border-box;
+  max-width: 80rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.valve-result-send {
+  overflow: auto;
+  position: relative;
+  display: none;
+  bottom: -100%;
+  padding: 2rem 2rem 1rem;
+  background-color: white;
+  margin: auto;
+  box-shadow: 0 5px 30px rgba(171,171,171,.59);
+
+  &.show {
+    display: block;
+    bottom: 0;
+  }
+
+  .valve-result-close {
+    margin: 0;
+    color: #999;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 60px;
+  }
+
+  .valve-result-header {
+    color: $color-main;
+  }
+
+  .valve-result-info {
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    width: 100%;
+
+    .valve-result-people {
+      display: block;
+      position: relative;
+      padding-right: 15px;
+    }
+
+    .response {
+      margin: 0 auto 0 0;
+    }
+
+    .valve-result-button {
+      display: inline-flex;
+      display: -ms-inline-flexbox;
+      cursor: pointer;
+      background-color: $color-main;
+      color: white;
+      padding: 5px 12px;
+      align-items: center;
+      white-space: nowrap;
+
+      & > * {
+        margin: auto;
+      }
+
+      & > .fa-arrow-up {
+        color: white;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .valve-result-close {
+      height: 40px;
+      width: 40px;
+      font-size: 20px;
+      line-height: 40px;
+    }
+
+    .valve-result-info {
+      display: block;
+
+      .valve-result-people {
+        margin-bottom: 10px;
+      }
+
+      .valve-result-button {
+        margin-top: 10px;
+      }
+    }
+  }
+}

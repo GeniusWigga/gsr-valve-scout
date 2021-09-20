@@ -1,0 +1,153 @@
+@import "../variables";
+
+/* 
+FIXME: This does not work, needs further investigation.
+.valve-result-overview-table-wrapper {
+  & + & {
+    margin-top: 15%;
+  }
+}
+
+This is a workaround.
+*/
+.valve-result-overview-table-wrapper + .valve-result-overview-table-wrapper {
+  margin-top: 15%;
+}
+
+.valve-result-overview-table-wrapper {
+  background-color: white;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  .image-description {
+    width: 100%;
+    display: flex;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    align-items: center;
+    margin-bottom: 2rem;
+    min-height: 200px;
+
+    .img-wrapper {
+      position: relative;
+      width: 30%;
+
+      img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 200px;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .overview-table-description-container {
+      display: inline-block;
+      width: 70%;
+      padding: 0 1rem;
+      box-sizing: border-box;
+
+      .valve-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .upper-headline {
+        color: $color-main;
+        margin-bottom: 0.5rem;
+      }
+
+      .external-link {
+        cursor: pointer;
+
+        .link-text {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .arrow-btn {
+    font-size: 1.2rem;
+
+    i {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .article-numbers {
+    .article-numbers-head-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      width: 75%;
+      max-width: 550px;
+
+      a {
+        cursor: pointer;
+      }
+
+      p {
+        margin: 0;
+        border-right: 2px solid $color-text-light-grey;
+        line-height: 20px;
+        padding-right: 5%;
+      }
+
+      .dropdown-explanation {
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+
+        .dropdown-icon,
+        .dropdown-text {
+          color: $color-main;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .dropdown-icon i {
+          font-size: 1.5rem;
+        }
+
+        .dropdown-text {
+          margin-left: 10px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    @import "article-number-list";
+    @import "article-number-explanations";
+  }
+
+  .show-form-button-wrapper {
+    // for now
+    display: none;
+
+    .show-form-button {
+      position: relative;
+      left: 50%;
+
+      transform: translate(-50%);
+
+      display: inline-block;
+      padding: 7px 14px;
+
+      background-color: $color-main;
+      color: #ffffff;
+
+      cursor: pointer;
+
+      font-size: larger;
+
+      text-align: center;
+    }
+  }
+}

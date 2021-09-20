@@ -1,0 +1,39 @@
+.valve-list {
+  display: block;
+  overflow: hidden;
+
+  > * + * {
+    padding-left: 25px;
+  }
+
+  & > img {
+    display: inline-block;
+    height: 75px;
+  }
+
+  > .fade {
+    height: 75px;
+    width: 45%;
+    position: absolute;
+    background: -webkit-linear-gradient(
+             right,
+             white 5%,
+             rgba(255,255,255,0) 25%
+    );
+    background: linear-gradient(
+            right,
+            white 5%,
+            rgba(255,255,255,0) 25%
+    );
+    background: -moz-linear-gradient(
+            right,
+            white 5%,
+            rgba(255,255,255,0) 25%
+    );
+
+    @media only screen and (max-width: 450px) {
+      width: 87%;
+    }
+  }
+}
+
