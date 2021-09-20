@@ -1,0 +1,20 @@
+{
+  "name": "poc-valve-scout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build ./src/ValveScout/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "7.11.5",
+    "parcel-bundler": "1.12.4",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "superagent": "3.8.3",
+    "url-search-params-polyfill": "4.0.1"
+  }
+}
