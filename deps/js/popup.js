@@ -3,8 +3,9 @@ const $ = require("jquery");
 const closeButtonSel = ".busch-mfp-close-btn";
 const _ = require("lodash");
 
-function registerPopupImage($obj, { mainClass, callbacks, ...options } = {}) {
-  const closeWord = buschjost.language == "en" ? "Close" : "Schließen";
+function registerPopupImage($obj, { mainClass, callbacks, ...options } = {}, language) {
+  const closeWord =
+    typeof buschjost !== "undefined" ? buschjost.language : language == "en" ? "Close" : "Schließen";
 
   if ($obj.size() < 1) {
     return;
