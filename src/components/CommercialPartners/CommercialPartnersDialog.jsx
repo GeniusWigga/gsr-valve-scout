@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import $ from "jquery";
 import _ from "lodash";
 import renderHTML from "react-render-html";
-import { _l } from "../../../../server/helpers/locale";
-import valveScout from "../../../static/valveScout";
+import { _l } from "../../../deps/server/helpers/locale";
+import valveScout from "../../../deps/js/static/valveScout";
 import FormInputWithLabel from "../FormInputWithLabel";
 import CrossIcon from "../widgets/CrossIcon";
 

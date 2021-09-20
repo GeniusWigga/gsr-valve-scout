@@ -1,8 +1,8 @@
 import React from "react";
 import moment from "moment-timezone";
 import renderHTML from "react-render-html";
-import { _l } from "../../../server/helpers/locale";
-import valveScout from "../../static/valveScout";
+import { _l } from "../../deps/server/helpers/locale";
+import valveScout from "../../deps/js/static/valveScout";
 
 export default class Response extends React.Component {
   static _responseActive() {

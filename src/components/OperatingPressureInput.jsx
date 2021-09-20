@@ -3,8 +3,8 @@ import _ from "lodash";
 import classnames from "classnames";
 import renderHTML from "react-render-html";
 import Loader from "./Loader.jsx";
-import { _l, substitute } from "../../../server/helpers/locale.js";
-import valveScout from "../../static/valveScout.js";
+import { _l, substitute } from "../../deps/server/helpers/locale.js";
+import valveScout from "../../deps/js/static/valveScout";
 
 export default class OperatingPressureInput extends React.Component {
   static _saveOperatingPressureValue(event, addAnswers, maxPressure, questionNumber) {

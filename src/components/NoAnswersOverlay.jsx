@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { _l } from "../../../server/helpers/locale.js";
-import valveScout from "../../static/valveScout.js";
+import { _l } from "../../deps/server/helpers/locale.js";
+import valveScout from "../../deps/js/static/valveScout";
 
 export default class NoAnswersOverlay extends Component {
   render() {

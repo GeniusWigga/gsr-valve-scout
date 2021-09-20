@@ -1,7 +1,7 @@
 import React from "react";
 
-import valveScout from "../../static/valveScout";
-import { _l } from "../../../server/helpers/locale";
+import valveScout from "../../deps/js/static/valveScout";
+import { _l } from "../../deps/server/helpers/locale";
 
 const Description = ({ locale }) => (
   <div className="description-container">

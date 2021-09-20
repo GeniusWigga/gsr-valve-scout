@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { parseQuery } from "../../OfferPortal/helper/path";
+import { parseQuery } from "../../deps/js/OfferPortal/helper/path";
 
 const LOCAL_STORAGE_TTL = 2 * 60 * 60 * 1000;
 

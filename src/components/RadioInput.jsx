@@ -4,9 +4,9 @@ import "magnific-popup";
 import React, { createElement, forwardRef, useEffect, createRef } from "react";
 import ReactDOM from "react-dom";
 
-import { _l } from "../../../server/helpers/locale";
-import buildClassName from "../../OfferPortal/helper/buildClassName";
-import popup from "../../popup";
+import { _l } from "../../deps/server/helpers/locale";
+import buildClassName from "../../deps/js/OfferPortal/helper/buildClassName";
+import popup from "../../deps/js/popup";
 import { ToolTipActions } from "../reflux/actions.js";
 import { generateUnsetAnswers } from "./QuestionContainer";
 

@@ -4,13 +4,13 @@ import $ from "jquery";
 import _ from "lodash";
 import superagent from "superagent";
 import { PlainQuestion } from "../Question.jsx";
-import structure from "../../../../server/helpers/structure.js";
+import structure from "../../../deps/server/helpers/structure.js";
 import RadioInput from "../RadioInput.jsx";
 import AnswerWrapper from "../AnswerWrapper.jsx";
 import { QuestionHelpButton, QuestionNextButton } from "../QuestionButton.jsx";
-import { _l } from "../../../../server/helpers/locale";
+import { _l } from "../../../deps/server/helpers/locale";
 import dataLayerPush from "../../helper/dataLayerHelper.js";
-import valveScout from "../../../static/valveScout.js";
+import valveScout from "../../../deps/js/static/valveScout";
 
 const debouncedDataLayerPush = _.debounce(dataLayerPush, 300);
 

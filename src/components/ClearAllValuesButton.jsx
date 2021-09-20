@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import valveScout from "../../static/valveScout.js";
-import { _l } from "../../../server/helpers/locale.js";
+import valveScout from "../../deps/js/static/valveScout";
+import { _l } from "../../deps/server/helpers/locale.js";
 
 export default class ClearAllValuesButton extends Component {
   render() {

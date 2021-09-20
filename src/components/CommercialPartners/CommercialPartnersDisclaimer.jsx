@@ -1,7 +1,7 @@
 import React from "react";
 import _ from "lodash";
-import { _l } from "../../../../server/helpers/locale";
-import valveScout from "../../../static/valveScout";
+import { _l } from "../../../deps/server/helpers/locale";
+import valveScout from "../../../deps/js/static/valveScout";
 
 const CommercialPartnersDisclaimer = ({ open, logout, locale, customer, allCustomers }) => {
   const isLoggedIn = !!customer;

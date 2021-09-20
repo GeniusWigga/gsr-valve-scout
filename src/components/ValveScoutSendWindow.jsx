@@ -6,8 +6,8 @@ import dataLayerPush from "../helper/dataLayerHelper";
 import { FormActions } from "../reflux/actions";
 import PeopleRow from "./PeopleRow";
 import Response from "./Response";
-import { _l } from "../../../server/helpers/locale";
-import valveScout from "../../static/valveScout";
+import { _l } from "../../deps/server/helpers/locale";
+import valveScout from "../../deps/js/static/valveScout";
 
 export default class ValveScoutSendWindow extends React.Component {
   static propTypes = {

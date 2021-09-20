@@ -2,8 +2,8 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { FormActions } from "../reflux/actions";
-import valveScout from "../../static/valveScout.js";
-import { _l } from "../../../server/helpers/locale.js";
+import valveScout from "../../deps/js/static/valveScout";
+import { _l } from "../../deps/server/helpers/locale.js";
 import dataLayerPush from "../helper/dataLayerHelper";
 
 export default class OpenFormButton extends PureComponent {

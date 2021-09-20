@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash";
 import { getImageUrl } from "../helper/valveScoutHelper";
-import { _l } from "../../../server/helpers/locale";
+import { _l } from "../../deps/server/helpers/locale";
 
 export default class ValveList extends React.Component {
   static propTypes = {

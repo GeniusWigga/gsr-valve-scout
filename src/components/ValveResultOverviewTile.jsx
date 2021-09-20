@@ -2,11 +2,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash";
-import { _l } from "../../../server/helpers/locale";
+import { _l } from "../../deps/server/helpers/locale";
 import ArticleNumberExplanations from "./ArticleNumberExplanations.jsx";
 import { getImageUrl } from "../helper/valveScoutHelper.js";
-import valveScout from "../../static/valveScout.js";
-import structure from "../../../server/helpers/structure.js";
+import valveScout from "../../deps/js/static/valveScout";
+import structure from "../../deps/server/helpers/structure.js";
 import { FormActions } from "../reflux/actions";
 
 const ValveResultOverviewTile = (props) => {

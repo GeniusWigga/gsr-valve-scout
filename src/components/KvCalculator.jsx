@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-import { _l } from "../../../server/helpers/locale";
-import { CONNECTION_TYPE } from "../../../server/helpers/valveScout";
-import { KV_ANSWER_KEY, QUESTION_KEY } from "../../../server/static/questions";
-import buildClassName from "../../OfferPortal/helper/buildClassName";
-import translations from "../../static/valveScout";
+import { _l } from "../../deps/server/helpers/locale";
+import { CONNECTION_TYPE } from "../../deps/server/helpers/valveScout";
+import { KV_ANSWER_KEY, QUESTION_KEY } from "../../deps/server/static/questions";
+import buildClassName from "../../deps/js/OfferPortal/helper/buildClassName";
+import translations from "../../deps/js/static/valveScout";
 import { generateUnsetAnswers } from "./QuestionContainer";
 
 const TEMPERATURE_SCALE = {

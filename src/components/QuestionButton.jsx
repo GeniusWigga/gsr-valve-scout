@@ -2,8 +2,8 @@ import React from "react";
 import classnames from "classnames";
 import _ from "lodash";
 
-import { _l } from "../../../server/helpers/locale";
-import valveScout from "../../static/valveScout.js";
+import { _l } from "../../deps/server/helpers/locale";
+import valveScout from "../../deps/js/static/valveScout";
 import { getHelpText } from "../helper/valveScoutHelper.js";
 import dataLayerPush from "../helper/dataLayerHelper.js";
 import { HelpTextActions } from "../reflux/actions.js";

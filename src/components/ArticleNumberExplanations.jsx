@@ -2,12 +2,12 @@ import React from "react";
 import _ from "lodash";
 import classnames from "classnames";
 
-import { _l } from "../../../server/helpers/locale";
-import valveScout from "../../static/valveScout.js";
-import structure from "../../../server/helpers/structure";
-import { getLocalStorageItem } from "../../OfferPortal/helper/localStorage";
-import { parseQuery } from "../../OfferPortal/helper/path";
-import { createIdentifier } from "../../../server/helpers/variants";
+import { _l } from "../../deps/server/helpers/locale";
+import valveScout from "../../deps/js/static/valveScout";
+import structure from "../../deps/server/helpers/structure";
+import { getLocalStorageItem } from "../../deps/js/OfferPortal/helper/localStorage";
+import { parseQuery } from "../../deps/js/OfferPortal/helper/path";
+import { createIdentifier } from "../../deps/server/helpers/variants";
 
 function generateValvePrinterUrl(product, variant, locale, currentAnswers, customer) {
   const { articleNumber } = variant;

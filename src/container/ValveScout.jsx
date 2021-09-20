@@ -13,7 +13,7 @@ import NoAnswersOverlay from "../components/NoAnswersOverlay.jsx";
 import ClearAllValuesButton from "../components/ClearAllValuesButton.jsx";
 import HelpTextOverlay from "../components/HelpTextOverlay.jsx";
 import Progress from "../components/Progress.jsx";
-import structure from "../../../server/helpers/structure.js";
+import structure from "../../deps/server/helpers/structure.js";
 import { mapAnswersToQuestions } from "../helper/valveScoutHelper.js";
 import dataLayerPush from "../helper/dataLayerHelper.js";
 import OpenFormButton from "../components/OpenFormButton";

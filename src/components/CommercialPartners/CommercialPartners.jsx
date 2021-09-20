@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 
 import request from "superagent";
-import structure from "../../../../server/helpers/structure";
+import structure from "../../../deps/server/helpers/structure";
 import CommercialPartnersDialog from "./CommercialPartnersDialog";
 import CommercialPartnersDisclaimer from "./CommercialPartnersDisclaimer";
 

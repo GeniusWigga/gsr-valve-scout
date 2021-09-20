@@ -3,8 +3,8 @@ import _ from "lodash";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 
-import { _l } from "../../../../server/helpers/locale.js";
-import valveScout from "../../../static/valveScout.js";
+import { _l } from "../../../deps/server/helpers/locale.js";
+import valveScout from "../../../deps/js/static/valveScout";
 import AnswerWrapper from "../AnswerWrapper.jsx";
 import Question from "../Question.jsx";
 import RadioInput from "../RadioInput.jsx";

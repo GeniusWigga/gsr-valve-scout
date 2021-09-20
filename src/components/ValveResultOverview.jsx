@@ -2,8 +2,8 @@ import React from "react";
 import _ from "lodash";
 import renderHTML from "react-render-html";
 
-import { _l, substitute } from "../../../server/helpers/locale.js";
-import valveScout from "../../static/valveScout.js";
+import { _l, substitute } from "../../deps/server/helpers/locale.js";
+import valveScout from "../../deps/js/static/valveScout";
 import ValveResultOverviewTile from "./ValveResultOverviewTile.jsx";
 
 const ValveResultOverview = ({

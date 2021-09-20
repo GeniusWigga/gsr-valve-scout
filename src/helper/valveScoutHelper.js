@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { _l } from "../../../server/helpers/locale";
+import { _l } from "../../deps/server/helpers/locale";
 
 export function mapAnswersToQuestions(questions, answers) {
   return _.keyBy(

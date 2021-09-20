@@ -5,8 +5,8 @@ import { PlainQuestion } from "../Question.jsx";
 import RadioInput from "../RadioInput.jsx";
 import AnswerWrapper from "../AnswerWrapper.jsx";
 import { QuestionHelpButton, QuestionNextButton } from "../QuestionButton.jsx";
-import valveScout from "../../../static/valveScout.js";
-import { _l } from "../../../../server/helpers/locale";
+import valveScout from "../../../deps/js/static/valveScout";
+import { _l } from "../../../deps/server/helpers/locale";
 
 export default class MaterialQuestion extends Component {
   static propTypes = {

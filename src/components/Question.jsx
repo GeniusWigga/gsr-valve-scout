@@ -2,8 +2,8 @@ import React from "react";
 import _ from "lodash";
 import AnswerWrapper from "./AnswerWrapper.jsx";
 import { QuestionHelpButton, QuestionSkipButton } from "./QuestionButton.jsx";
-import { _l } from "../../../server/helpers/locale";
-import valveScout from "../../static/valveScout.js";
+import { _l } from "../../deps/server/helpers/locale";
+import valveScout from "../../deps/js/static/valveScout";
 
 export const PlainQuestion = ({ question, children, locale }) => {
   const questionCountString = `${_l(valveScout.questionText, locale)} ${question.number}`;
