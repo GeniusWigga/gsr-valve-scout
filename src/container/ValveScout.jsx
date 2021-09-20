@@ -220,7 +220,7 @@ export default class ValveScout extends Component {
   }
 
   _getAllAnswers() {
-    this._setAllAnswersState(true, true, false, null); // this.state.allAnswers.data);
+    this._setAllAnswersState(true, true, false, null);
     return request.get(structure.getLinkNode("valve_scout/answers").getUrl(this.props.locale)).end((err, res) => {
       if (err) {
         console.warn("error answers: ", err);
