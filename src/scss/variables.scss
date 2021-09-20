@@ -1,0 +1,100 @@
+//Colors
+$color-main: #c01717;
+$color-main-brighter: #cc2424;
+$color-main-darker: #961717;
+$color-main-brighter-hover: rgba(204, 36, 36, 0.30);
+$color-text-primary: #333;
+$color-text-light-readable-grey: #999999;
+$color-bright: #ebebeb;
+$color-bg-medium-grey: #dfdfdf;
+$color-bg-overlay-content: #F6F6F6;
+$color-bg-dark: #333;
+$color-text-grey: #c4c4c4;
+$color-text-light-grey: #dddddd;
+$color-green: #17C047;
+$color-green-darker: #179643;
+$color-green-hover: rgba(23, 192, 71, 0.30);
+$color-gray: #BFBFBF;
+$color-gray-hover: rgba(55, 55, 55, 0.30);
+$color-gray-darker: #373737;
+$color-yellow: #ebb447;
+$color-yellow-hover: rgba(223, 159, 32, 0.30);
+$color-yellow-darker: #df9f20;
+$color-blue: #257EE4;
+$color-blue-hover: rgba(37, 126, 228, 0.30);
+
+$color-overlay: rgba(44, 44, 44, 0.65);
+
+$color-white: #fff;
+
+$color-border: #c4c4c4;
+$color-border-bright: #DFDFDF;
+
+//Font sizes
+$font-size-smallest: 0.75rem;
+
+//Heights and Spaces
+$nav-height: 85px;
+$nav-height-mobile: 60px;
+$standard-padding: 5%;
+$footer-height: 80px;
+
+$space-small-5: 5px; // small padding
+$space-small-10: 10px;
+
+$space-medium-15: 15px;
+$space-medium-20: 20px;
+$space-medium-30: 30px;
+$space-medium-40: 40px;
+
+$space-large-50: 50px;
+$space-large-60: 60px;
+
+$space-huge-75: 75px; // content with background
+$space-huge-100: 100px; // section
+$space-huge-150: 150px;
+
+$offer-portal-dashboard-max-width: 1800px;
+$offer-portal-max-width: 1200px;
+$overlay-width-medium: 1000px;
+$overlay-width-small: 600px;
+
+$input-height: 40px;
+
+// Border
+$border-width-lighter: 1px;
+$border-width-light: 2px;
+$border-width-regular: $space-small-5;
+$border-width-bold: 8px;
+
+$border-radius-small: 2px;
+
+$border-light: $border-width-lighter solid $color-border;
+
+// Box shadow
+$box-shadow-dp1: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+$box-shadow-dp4: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+
+//Responsive Units
+
+//Desktop
+// Large: > 1440px / 1600px
+
+//Small: 1024 <1200px / 14440
+$responsive-desktop: 1600px;
+
+//Tablet
+// <1024px  >600px
+
+//Smartphone
+// < 600px >320px
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

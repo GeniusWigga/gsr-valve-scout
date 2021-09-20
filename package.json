@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel index.html",
     "build": "parcel build ./src/index.js"
   },
   "author": "",
@@ -30,6 +31,7 @@
     "react-render-html": "0.6.0",
     "react-select": "3.0.4",
     "reflux": "6.4.1",
+    "sass": "1.26.11",
     "superagent": "3.8.3",
     "url-search-params-polyfill": "4.0.1"
   }
