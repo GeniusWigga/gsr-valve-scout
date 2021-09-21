@@ -12,11 +12,11 @@ import { generateUnsetAnswers } from "./QuestionContainer";
 
 const TOGGLE_DRAWING_ID = "toggle-drawing";
 
-const InfoWrapper = forwardRef(({ drawingUrl, helpTexts, elementId, checked, actionElement, hasActive }, ref) => {
+const InfoWrapper = forwardRef(({ drawingUrl, helpTexts, elementId, checked, actionElement, hasActive, language }, ref) => {
   const id = `${TOGGLE_DRAWING_ID}--${elementId}`;
 
   useEffect(() => {
-      popup.registerImage($(`#${id}`), {
+      popup.registerImage($(`#${id}`, {}, language), {
         mainClass: "info-wrapper__popup",
         image: { verticalFit: true, tError: '<a href="%url%">The image</a> could not be loaded.' },
         callbacks: {
@@ -231,6 +231,7 @@ export default class RadioInput extends React.Component {
             checked={checked}
             actionElement={actionElement}
             hasActive={_.find(sortedOptions, "active")}
+            language={this.props.locale}
           />
         </label>
       </div>
