@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import request from "superagent";
 import _ from "lodash";
 import CommercialPartners from "../components/CommercialPartners/CommercialPartners";
 import Description from "../components/Description.jsx";
@@ -13,13 +12,14 @@ import NoAnswersOverlay from "../components/NoAnswersOverlay.jsx";
 import ClearAllValuesButton from "../components/ClearAllValuesButton.jsx";
 import HelpTextOverlay from "../components/HelpTextOverlay.jsx";
 import Progress from "../components/Progress.jsx";
-import structure from "../../deps/server/helpers/structure.js";
 import { mapAnswersToQuestions } from "../helper/valveScoutHelper.js";
 import dataLayerPush from "../helper/dataLayerHelper.js";
 import OpenFormButton from "../components/OpenFormButton";
 import ValveScoutSendWindow from "../components/ValveScoutSendWindow";
 import { loadState, saveState } from "../helper/storage";
 import "url-search-params-polyfill";
+
+import { getAnswers, getFilteredProducts, getQuestions } from "../../newDeps/api";
 
 export default class ValveScout extends Component {
   static propTypes = {
@@ -209,7 +209,8 @@ export default class ValveScout extends Component {
 
   _getQuestions() {
     this._setQuestionsState(true, true, false, null);
-    return request.get(structure.getLinkNode("valve_scout/questions").getUrl(this.props.locale)).end((err, res) => {
+
+    return getQuestions(this.props.locale).end((err, res) => {
       if (err) {
         console.warn("error answers: ", err);
         this._setQuestionsState(false, false, true, err);
@@ -221,7 +222,8 @@ export default class ValveScout extends Component {
 
   _getAllAnswers() {
     this._setAllAnswersState(true, true, false, null);
-    return request.get(structure.getLinkNode("valve_scout/answers").getUrl(this.props.locale)).end((err, res) => {
+
+    return getAnswers(this.props.locale).end((err, res) => {
       if (err) {
         console.warn("error answers: ", err);
         this._setAllAnswersState(false, false, true, err);
@@ -235,12 +237,9 @@ export default class ValveScout extends Component {
     const { filteredAnswers } = this.state;
     const { data: oldFilteredAnswers } = filteredAnswers;
 
-    const query = `?${ValveScout._generateQuery(this.state.currentAnswers)}`;
-
     this._setFilteredAnswersState(true, true, false, null, oldFilteredAnswers);
 
-    return request
-      .get(structure.getLinkNode("valve_scout/answers").getUrl(this.props.locale) + query)
+    return getAnswers(this.props.locale, ValveScout._generateQuery(this.state.currentAnswers))
       .end((err, res) => {
         if (err) {
           console.warn("error answers: ", err);
@@ -252,10 +251,9 @@ export default class ValveScout extends Component {
   }
 
   _getFilteredProducts() {
-    const query = `?${ValveScout._generateQuery(this.state.currentAnswers)}`;
     this._setFilteredProductsState(true, false, false, null);
-    return request
-      .get(structure.getLinkNode("valve_scout/filter").getUrl(this.props.locale) + query)
+
+    return getFilteredProducts(locale, ValveScout._generateQuery(this.state.currentAnswers))
       .end((err, res) => {
         if (err) {
           console.warn("error answers: ", err);
