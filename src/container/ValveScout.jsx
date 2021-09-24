@@ -239,7 +239,7 @@ export default class ValveScout extends Component {
 
     this._setFilteredAnswersState(true, true, false, null, oldFilteredAnswers);
 
-    return getAnswers(this.props.locale, ValveScout._generateQuery(this.state.currentAnswers))
+    return getAnswers(this.props.locale, `?${ValveScout._generateQuery(this.state.currentAnswers)}`)
       .end((err, res) => {
         if (err) {
           console.warn("error answers: ", err);
@@ -253,7 +253,7 @@ export default class ValveScout extends Component {
   _getFilteredProducts() {
     this._setFilteredProductsState(true, false, false, null);
 
-    return getFilteredProducts(locale, ValveScout._generateQuery(this.state.currentAnswers))
+    return getFilteredProducts(this.props.locale, `?${ValveScout._generateQuery(this.state.currentAnswers)}`)
       .end((err, res) => {
         if (err) {
           console.warn("error answers: ", err);

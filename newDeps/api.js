@@ -3,7 +3,6 @@ import superAgent from "superagent";
 
 import config from "../config.json";
 import structure from "../deps/server/helpers/structure";
-import { getQueryString } from "../deps/js/OfferPortal/helper/path";
 
 const BASE_API_URL = config.apiUrl;
 
@@ -36,9 +35,9 @@ const doFetch = ({ path, body = {}, options = {}, method }) => {
 
 export const simpleGet = (requestOptions) => doFetch({ ...requestOptions, method: "GET" });
 
-export const getAnswers = (locale, query) => {
+export const getAnswers = (locale, query = "") => {
   return simpleGet({
-    path: structure.getLinkNode("valve_scout/answers").getUrl(locale) + getQueryString(query),
+    path: structure.getLinkNode("valve_scout/answers").getUrl(locale) + query,
   });
 };
 
@@ -46,8 +45,8 @@ export const getQuestions = locale => {
   return simpleGet({ path: structure.getLinkNode("valve_scout/questions").getUrl(locale) });
 };
 
-export const getFilteredProducts = locale => {
+export const getFilteredProducts = (locale, query = "") => {
   return simpleGet({
-    path: structure.getLinkNode("valve_scout/filtered").getUrl(locale) + getQueryString(query),
+    path: structure.getLinkNode("valve_scout/filter").getUrl(locale) + query,
   });
 };
