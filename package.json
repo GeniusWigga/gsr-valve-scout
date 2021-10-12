@@ -1,0 +1,19 @@
+{
+  "name": "poc-valve-scout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "npx light-server -s . -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeniusWigga/gsr-valve-scout.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeniusWigga/gsr-valve-scout/issues"
+  },
+  "homepage": "https://github.com/GeniusWigga/gsr-valve-scout#readme"
+}
